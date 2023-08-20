@@ -1,0 +1,41 @@
+<nav data-controller='nav' data-nav-target='nav' class="pt-2 px-4 md:flex md:flex-col fixed md:h-[100svh] md:w-fit w-full z-50 transition-colors">
+  <div class="flex justify-between items-center">
+    <%# logo %>
+    <span>
+      <ion-icon name="diamond-sharp" class="hidden md:block text-4xl md:mx-7 my-3"></ion-icon>
+    </span>
+
+    <%# nav button %>
+    <button type='button' data-action="nav#toggleNav" class="text-3xl cursor-pointer md:hidden block">
+      <ion-icon data-nav-target="menu" class="p-2 rounded-full shadow-md dark:shadow-gray-800" name="menu"></ion-icon>
+    </button>
+  </div>
+
+  <ul data-nav-target='list' class="md:flex flex-col md:ml-4 md:static absolute w-full h-[100svh] left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-0 transition-transform md:translate-y-0 -translate-y-[120%] bg-lm-1 dark:bg-dm-1 md:bg-transparent">
+    <%= link_to root_path do %>
+      <li class="mr-4 md:mx-1 my-3 text-xl hover:bg-gray-200 dark:hover:bg-gray-800 md:w-fit py-2 px-3 rounded-3xl duration-500 flex justify-end md:justify-normal md:flex-row-reverse items-center gap-3">
+        <p>Home</p>
+        <ion-icon name="home" class="text-2xl"></ion-icon>
+      </li>
+    <% end %>
+    <li class="mr-4 md:mx-1 my-3 text-xl hover:bg-gray-200 dark:hover:bg-gray-800 md:w-fit py-2 px-3 rounded-3xl duration-500 flex justify-end md:justify-normal md:flex-row-reverse items-center gap-3">
+      <p>Profile</p>
+      <ion-icon name="person-circle" class="text-2xl"></ion-icon>
+    </li>
+    <li class="mr-4 md:mx-1 my-3 text-xl hover:bg-gray-200 dark:hover:bg-gray-800 md:w-fit py-2 px-3 rounded-3xl duration-500 flex justify-end md:justify-normal md:flex-row-reverse items-center gap-3">
+      <p>Settings</p>
+      <ion-icon name="cog" class="text-2xl"></ion-icon>
+    </li>
+    <li class="mr-4 md:mx-1 my-3 text-xl hover:bg-gray-200 dark:hover:bg-gray-800 md:w-fit py-2 px-3 rounded-3xl duration-500 flex justify-end md:justify-normal md:flex-row-reverse items-center gap-3">
+      <p>Log out</p>
+      <ion-icon name="log-out" class="text-2xl"></ion-icon>
+    </li>
+
+    <%# dark mode button %>
+    <li class="mr-6 md:mx-1 my-3 flex justify-end md:justify-normal">
+      <button type='button' data-action='nav#toggleMode' class="text-2xl px-2 pt-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full duration-500">
+        <ion-icon data-nav-target='mode' name="sunny-outline"></ion-icon>
+      </button>
+    </li>
+  </ul>
+</nav>
