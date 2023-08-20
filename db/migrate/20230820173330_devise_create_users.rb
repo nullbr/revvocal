@@ -5,6 +5,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
     create_table :users do |t|
       # Addons
       t.string :username
+      t.string :full_name
+      t.string :avatar_url
+      t.string :provider
+      t.string :uid
       t.integer :role, null: false, default: 0 # default memeber
 
       ## Database authenticatable

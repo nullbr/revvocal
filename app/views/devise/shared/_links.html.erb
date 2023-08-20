@@ -8,9 +8,10 @@
 
 <%- if devise_mapping.omniauthable? %>
   <div class="flex justify-center gap-3">
-    <div class="btn-primary flex items-center justify-center bg-sky-600 hover:bg-sky-500 gap-x-2 py-2">
-      <ion-icon class="text-2xl" name="logo-facebook"></ion-icon>
-      <%= button_to "Facebook", user_facebook_omniauth_authorize_path, :data => {turbo: "false"} %><br/>
+    <div class="btn-primary flex items-center justify-center bg-red-500 hover:bg-red-600 gap-x-2 py-2">
+      <ion-icon class="text-2xl" name="logo-google"></ion-icon>
+      <%= button_to "Google", user_google_oauth2_omniauth_authorize_path, :data => {turbo: "false"} %>
+      <br/>
     </div>
 
     <div class="btn-primary flex items-center justify-center bg-gray-700 hover:bg-gray-600 gap-x-2 py-2">

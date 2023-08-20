@@ -1,12 +1,12 @@
-<div class="m-auto max-w-sm w-full flex flex-col">
+<div class="m-auto max-w-sm w-full flex flex-col py-20">
   <%= image_tag "logo_nav.svg", class: "h-20 w-auto" %>
 
-  <div class="self-center inline-flex gap-2">
+  <div class="self-center flex flex-col sm:flex-row gap-2">
     <h2 class="text-4xl self-center duration-500">join us on</h2>
     <h1>RevVocal</h1>
   </div>
 
-  <p class="self-center mb-4 duration-500">
+  <p class="self-center my-4 duration-500">
     Already have an account? <%= link_to "Log in", new_session_path(resource_name), class: "underline" %>
   </p>
 
