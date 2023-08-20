@@ -19,7 +19,7 @@ module.exports = {
         "dm-text-2": "c8d1d8",
         "lm-1": "#f2f5f6",
         "lm-2": "#ffffff",
-        "lm-text-2": "c8d1d8",
+        primary: "#5271FF",
       },
     },
   },

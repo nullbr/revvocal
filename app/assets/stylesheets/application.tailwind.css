@@ -5,6 +5,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
 @layer components {
+  h1 {
+    @apply text-4xl font-bold text-primary;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
   .grid-cols-nav {
     grid-template-columns: 275px 3fr;
   }
