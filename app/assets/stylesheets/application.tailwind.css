@@ -4,6 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
+/* components */
 @layer components {
   h1 {
     @apply text-4xl font-bold text-primary;
@@ -13,10 +14,40 @@
     @apply text-3xl font-bold;
   }
 
-  .grid-cols-nav {
-    grid-template-columns: 275px 3fr;
+  /* flash messages */
+  .flashes {
+    @apply relative;
   }
 
+  .flash {
+    @apply absolute top-5 right-5 text-center text-sm px-4 py-2 font-medium rounded-lg;
+
+    &.notice,
+    &.success {
+      @apply bg-green-200 text-green-900;
+    }
+
+    &.error,
+    &.alert {
+      @apply bg-red-300 text-red-900;
+    }
+  }
+
+  /* animation keyframes */
+  @keyframes fade-in-and-out {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    25%,
+    75% {
+      opacity: 1;
+    }
+  }
+}
+
+/* utilities */
+@layer utilities {
   .input-primary {
     border: none;
     outline: none;

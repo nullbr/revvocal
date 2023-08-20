@@ -1,0 +1,36 @@
+<div class="m-auto max-w-sm w-full flex flex-col">
+  <%= image_tag "logo_nav.svg", class: "h-20 w-auto" %>
+
+  <div class="self-center inline-flex gap-2">
+    <h2 class="text-4xl self-center duration-500">join us on</h2>
+    <h1>RevVocal</h1>
+  </div>
+
+  <p class="self-center mb-4 duration-500">
+    Already have an account? <%= link_to "Log in", new_session_path(resource_name), class: "underline" %>
+  </p>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', :class => 'input-primary dark:input-dark' %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :username, placeholder: 'Username', :class => 'input-primary dark:input-dark' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password', :class => 'input-primary dark:input-dark' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password confirmation', :class => 'input-primary dark:input-dark' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up", :class => 'btn-primary font-bold py-2 bg-emerald-600 hover:bg-emerald-500' %>
+    </div>
+  <% end %>
+</div>
