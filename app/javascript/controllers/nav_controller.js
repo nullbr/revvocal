@@ -20,10 +20,10 @@ export default class extends Controller {
   }
 
   toggleNav(e) {
-    if (this.listTarget.classList.contains("-translate-y-[120%]")) {
+    if (this.listTarget.classList.contains("translate-x-full")) {
       // show nav
-      this.listTarget.classList.remove("-translate-y-[120%]");
-      this.listTarget.classList.add("translate-y-0");
+      this.listTarget.classList.remove("translate-x-full");
+      this.listTarget.classList.add("translate-x-0");
 
       // change background color
       this.navTarget.classList.add("bg-lm-1");
@@ -33,8 +33,8 @@ export default class extends Controller {
       this.menuTarget.name = "close";
     } else {
       // hide nav
-      this.listTarget.classList.remove("translate-y-0");
-      this.listTarget.classList.add("-translate-y-[120%]");
+      this.listTarget.classList.remove("translate-x-0");
+      this.listTarget.classList.add("translate-x-full");
 
       // change background color
       this.navTarget.classList.remove("bg-lm-1");
