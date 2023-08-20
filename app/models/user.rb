@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
+  enum role: { 'member': 0, "admin": 1 }
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -16,7 +20,7 @@ class User < ApplicationRecord
     if (login = conditions.delete(:login))
       where(conditions.to_h).where(['lower(username) = :value OR lower(email) = :value',
                                     { value: login.downcase }]).first
-    elsif conditions.has_key?(:username) || conditions.has_key?(:email)
+    elsif conditions.key?(:username) || conditions.key?(:email)
       where(conditions.to_h).first
     end
   end
