@@ -1,10 +1,15 @@
-<section class="shadow-md dark:shadow-none w-full">
+<section class="w-full py-10 md:py-20">
   <div class="h-[45px] md:h-[100px] rounded-t-[6px] bg-primary"></div>
   <div class="flex flex-col items-start md:items-center py-4 bg-white dark:bg-dm-2 mb-3 rounded-b-[6px]">
 
-    <%= image_tag profile_img(current_user), class: "border-solid border-4 md:border-8 border-primary rounded-full w-20 h-20 md:w-40 md:h-40 absolute left-12 md:left-auto top-16 md:top-8" %>
+    <%= image_tag profile_img(current_user), class: "border-solid border-4 md:border-8 border-primary rounded-full w-20 h-20 md:w-40 md:h-40 absolute left-12 md:left-auto top-[8.5rem] md:top-28" %>
 
-    <div class='flex flex-col items-center md:items-start md:gap-x-9 md:mt-9 pl-3 md:pl-0 md:pb-4 pt-10'>
+    <%# edit user button %>
+    <div class="flex justify-end w-full pr-4">
+      <%= link_to "Edit profile", edit_user_registration_path(current_user), class: "bg-gray-600 hover:bg-gray-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-3 py-2 rounded-lg duration-500" %>
+    </div>
+
+    <div class='flex flex-col items-center md:items-start md:gap-x-9 md:mt-9 p-8 md:pt-0'>
       <div>
         <% unless current_user.full_name.present? %>
           <h1 class='text-3xl text-left md:text-center font-bold'><%= current_user.username %></h1>
