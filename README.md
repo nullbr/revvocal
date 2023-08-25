@@ -1,5 +1,7 @@
 # Motorcycle Engine Sound Guessing Game
 
+<img width="953" alt="Screenshot 2023-08-25 at 09 37 45" src="https://github.com/nullbr/revvocal/assets/94543524/49547eb0-61c7-4b55-b004-4244a136d609">
+
 Welcome to the Motorcycle Engine Sound Guessing Game! Test your knowledge of motorcycle engine sounds with this web app created using Ruby 3.1.2 and Ruby on Rails 7.0.6. Dive into the exciting world of motorcycles and challenge yourself to identify different engine sounds from various models and brands.
 
 ## Features
